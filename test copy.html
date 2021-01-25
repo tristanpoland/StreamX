@@ -1,0 +1,193 @@
+<html>
+<head>
+<script type="text/javascript" src="player.js"></script>
+<link rel="stylesheet" type="text/css" href="player.css">
+</head>
+<body>
+<div id="wrapper">
+ <div id='player_wrapper'>
+  <video id='video_player'>
+   <source src='file:///Users/tristanpoland/Desktop/PMC.mp4' type='video/mp4'>
+  </video>
+  <div id='player_controls'>
+   <input type="image" src="https://freepngimg.com/thumb/play_button/25893-7-play-button-image.png" onclick="play_vid()" id="play_button">
+   <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+  </div>
+ </div>
+<div id='Other streams title'>
+Streams that may interest you:
+</div>
+<div id='Other streams'>
+Videos here:
+</div>
+</div>
+<div id='belowvideo'>
+Streamer:Tristan Poland | Status:Live now | Viewers:1 | Stream started: 17 hrs ago
+</div>
+<div id='spacer'>
+  .
+</div>
+<div id='belowstats'>
+Today we're just vibin' on the Poland family Minecraft server
+</div>
+<div id='belowstats'>
+Check out the TJPGaming / CodingwithTJ website to see upcoming streams, and add them to your calendar. https://www.codingwithtj.weebly.com
+</div>
+<div id='spacer'>
+  .
+</div>
+<div id='spacer'>
+  .
+</div>
+</div>
+<div id='belowstats'>
+Co-streamers
+</div>
+<div id='belowstats'>
+No co-streamers for this stream.
+</div>
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
+var player;
+
+function startplayer() 
+{
+ player = document.getElementById('video_player');
+ player.controls = false;
+}
+function play_vid()
+{ 
+  if (player.paused) 
+    player.play(); 
+  else 
+    player.pause();
+}
+function pause_vid()
+{
+ player.pause();
+}
+function stop_vid() 
+{
+ player.pause();
+ player.currentTime = 0;
+}
+function change_vol()
+{
+ player.volume=document.getElementById("change_vol").value;
+}
+</script>
+<style>
+
+/* CSS */
+
+body
+{
+ width:100%;
+ margin:0 auto;
+ padding:2%;
+ font-family:helvetica;
+ background-color:#7878ff;
+}
+#belowvideo
+{
+ Width:78.5%;
+ margin:0;
+ padding:0%;
+ padding-top: 40px;
+ right: 0px;
+ background-color:#590c37;
+ font-family: "Lucida Console", Monaco, monospace;
+ font-size: 20px;
+ letter-spacing: 2px;
+ word-spacing: 2px;
+ color: #ffffff;
+ font-weight: normal;
+ text-decoration: none;
+ font-style: normal;
+ font-variant: normal;
+ text-transform: none;
+ Text-align: center;
+}
+#spacer
+{
+ color: #7878ff;
+}
+#belowstats
+{
+ Width:78.5%;
+ margin:0;
+ padding:0%;
+ padding-top: 3px;
+ right: 0px;
+ background-color:#000000;
+ font-size: 20px;
+ letter-spacing: 2px;
+ word-spacing: 2px;
+ color: #7878ff;
+ font-weight: normal;
+ text-decoration: none;
+ font-style: normal;
+ font-variant: normal;
+ text-transform: none;
+ Text-align: left;
+}
+#wrapper
+{
+ text-align:Left;
+ margin:0 auto;
+ padding:0px;
+ width: 0 px;
+ overflow: hidden; /* will contain if #first is longer than #second */
+}
+#player_wrapper
+{
+ position:relative;
+ width:80%;
+ Margin-left: 0px;
+ float:left; /* add this */
+}
+#Other streams
+{
+ position:relative;
+ width:94%;
+ Margin-left: 0px;
+ float:left; /* add this */
+ Text-align: left;
+}
+#Other streams title
+{
+ background-color:#000000;
+ position:relative;
+ width:94%;
+ Margin-left: 0px;
+ float:left; /* add this */
+ Text-align: left;
+}
+#video_player
+{
+ width:98%;
+}
+#player_controls
+{
+ top:98%;
+background-color:rgb(120, 120, 230);
+ Width:98%;
+ padding:5px;
+ box-sizing:border-box;
+}
+input[type="image"]
+{
+ float:left;
+ height:20px;
+ margin-left:2px;
+ margin-right:5px;
+ margin-top:2px;
+}
+#vol_img
+{
+ margin-left:150px;
+ width:20px;
+}
+</style>
